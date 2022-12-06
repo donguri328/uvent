@@ -154,6 +154,7 @@ section {
 .under {
     border-bottom: 0.4rem solid var(--base-color);
     padding:0 1rem 1rem 1rem;
+    border-color: #A1C3F5;
 }
 .center {
 	text-align: center;
