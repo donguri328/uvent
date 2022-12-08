@@ -163,7 +163,7 @@ section {
 	margin-bottom: 4rem;
 }
 
-/*申し込みの流れ
+/*
 -------------------------------------*/
 .flow.row {
 	margin-bottom: 3rem;
@@ -179,7 +179,7 @@ footer h4 {
     border-bottom: 3px solid var(--base-color);
 }
 
-/*お問い合わせ
+/*フォーム
 -------------------------------------*/
 .contact-box {
 	border: 1px solid var(--border-color);
@@ -191,19 +191,6 @@ footer h4 {
 }
 .table th {
 	width: 250px;
-}
-
-/*コピーライト
--------------------------------------*/
-.copyright {
-    text-align: center;
-    padding: 1rem 0;
-    background-color: var(--base-color);
-}
-.copyright a {
-    color: var(--white-color);
-    text-decoration: none;
-	display: inline;
 }
 
 /*ページトップへ戻るボタン
@@ -234,7 +221,7 @@ footer h4 {
 .header-box {
 	display: none;
 }	
-/*お問い合わせ
+/*フォーム
 -------------------------------------*/
 .table th {
 	width: 100%;
