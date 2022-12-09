@@ -22,61 +22,65 @@
 <header>    
 <div class="container">
 <div class="row">
-    <div class="col span-12 header">
-        <h1><a href="index.html">uvent</a></h1>
+<div class="col span-12 header">
+    <h1><a href="index.html">uvent</a></h1>
 
 </header>
 
     <main>
 		
 <section id="5">
-        <h2 class="center"><span class="under">投稿</span></h2>
+
+    <h2 class="center"><span class="under">投稿</span></h2>
+
 <div class="container">	
 <div class="row">
-	<div class="col span-12">
- <form method="post" action="">
+<div class="col span-12">
+
+<!--methodにpost入れる！！！-->
+<form method="" action="">
 <table class="table full-width">
   <tbody>
     <tr>
-        <th class="post"><label for="category">カテゴリー</label></th>
+        <th class="post"><label for="category">カテゴリー</label><p class="required">※必須</p></th>
         <td>
-        <select class="full-sidth" type="category" name="カテゴリー" size="1" required>
-            <option>--カテゴリー選択--</option>
-            <option>パーティ</option>
-            <option>お祭り</option>
-            <option>セミナー</option>
-            <option>ワークショップ</option>
-            <option>コンサート</option>
-            <option>キャンペーン</option>
-            <option>スポーツ</option>
-            <option>フリーマーケット</option>
-            <option>展示会</option>
-            <option>育児</option>
-            <option>自然</option>
-            <option>その他</option>
+        <select class="full-sidth" type="category" name="category" size="1" required id="category">
+            <option value="" hidden>--カテゴリー選択--</option>
+            <option value="パーティ">パーティ</option>
+            <option value="お祭り">お祭り</option>
+            <option value="セミナー">セミナー</option>
+            <option value="ワークショップ">ワークショップ</option>
+            <option value="コンサート">コンサート</option>
+            <option value="キャンペーン">キャンペーン</option>
+            <option value="スポーツ">スポーツ</option>
+            <option value="フリーマーケット">フリーマーケット</option>
+            <option value="展示会">展示会</option>
+            <option value="育児">育児</option>
+            <option value="自然">自然</option>
+            <option value="その他">その他</option>
         </select>
         </td>
     </tr>
     <tr>
-        <th class="post"><label for="title">タイトル</label></th>
-        <td><input class="full-width" type="text" name="タイトル" placeholder="タイトルを記入" id="TitleInput"></td>
+        <th class="post"><label for="title">タイトル</label><p class="required">※必須</p></th>
+        <td><input class="full-width" type="text" name="title" placeholder="タイトルを記入" id="Title" required></td>
     </tr>
 	<tr>
         <th class="post"><label for="Event">イベント説明</label></th>
-        <td><textarea class="full-width textarea" name="イベント説明" placeholder="イベントの説明を記入" id="Detail"></textarea></td>
+        <td><textarea class="full-width textarea" name="イベント説明" placeholder="イベントの説明を記入" id="EventDetail"></textarea></td>
     </tr>
     <tr>
-        <th class="post"><label for="Date">開催日時</label></th>
-        <td>開始：<input class="full-width" type="datetime-local" name="開始日時" id="StartTimeInput"></td>
-        <td>終了：<input class="full-width" type="datetime-local" name="終了日時" id="EndTimeInput"></td>
+        <th class="post"><label for="Date">開催日時</label><p class="required">※必須</p></th>
+        <td>開始：<input class="full-width" type="datetime-local" name="StartTime" id="StartTime" required></td>
+        <td>終了：<input class="full-width" type="datetime-local" name="EndTime" id="EndTimeInput" required></td>
     </tr>
     <tr>
-        <th class="post"><label for="Place">開催場所</label></th>
-        <td><input class="full-width" type="text" name="開催場所" placeholder="会場名を記入" id="PlaceInput"></td>
+        <th class="post"><label for="Place">開催場所</label><p class="required">※必須</p></th>
+        <td><input class="full-width" type="text" name="Place" placeholder="会場名を記入" id="PlaceInput" required></td>
     </tr>
     <tr>
-        <th class="post"><label for="Address">住所</label></th>
-        <td><input class="full-width" type="text" name="会場住所" placeholder="会場の住所を記入" id="AddressInput"></td>
+        <th class="post"><label for="Address">住所</label><p class="required">※必須</p></th>
+        <td><input class="full-width" type="text" name="会場住所" placeholder="会場の住所を記入" id="AddressInput" required></td>
     </tr>
     <tr>
         <th class="post"><label for="Deadline">募集締め切り</label></th>
@@ -88,12 +92,15 @@
     </tr>
   </tbody>
 </table>
-<p class="center"><input class="button" type="submit" value="投　稿"></p>
+
+<p class="center"><button type="submit" class="button" id="post" formaction="index.html">投　稿</button></p>
+
 </form>	
-	
-	</div>
-	</div>
-	</div>
+
+</div>
+</div>
+</div>
+
 </section>
         
     </main>

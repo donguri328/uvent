@@ -31,50 +31,71 @@
     <section>
             <h2 class="center"><span class="under">新規登録</span></h2>
 
-            <div class="container">	
-                <div class="row">
-                    <div class="col span-12">
-                 <form method="post" action="">
-                <table class="table full-width">
-                  <tbody>
-                    <tr>
-                        <th class="post"><label for="UserName">お名前</label></th>
-                        <td><input class="full-width" type="text" name="ユーザーネーム" placeholder="名前を記入" id="UserNameInput"></td>
-                      </tr>
-                      <tr>
-                          <th class="post"><label for="email">メールアドレス</label></th>
-                          <td><input class="full-width" type="email" name="Email" placeholder="メールアドレスを記入" id="EmailInput"></td>
-                        </tr>
-                      <tr>
-                        <th class="post"><label for="BirthDay">生年月日</label></th>
-                        <td><input class="full-width" type="date" name="生年月日" id="BirthInput"></td>
-                      </tr>
-                      <tr>
-                          <th class="post"><label for="Address">ご住所</label></th>
-                          <td><input class="full-width" type="text" name="住所" placeholder="住所を記入" id="AddressInput"></td>
-                      </tr>
-                      <tr>
-                          <th class="post"><label for="email">自己紹介</label></th>
-                          <td><textarea class="full-width textarea" type="textaria" name="自己紹介" id="IntroductionInput"></textarea></td>
-                        </tr>
-                      <tr>
-                          <th class="post"><label for="image">アイコン</label></th>
-                          <td><input class="full-width" type="file" accept="image/jpeg, image/png" name="アイコン" id="IconInput"></td>
-                      </tr>
-                    <tr>
-                        <th class="post"><label for="password">パスワード</label></th>
-                        <td><input class="full-width" type="password" name="パスワード" placeholder="パスワードを入力" id="PasswordInput"></td>
-                    </tr>
+      <div class="container">	
+      <div class="row">
+      <div class="col span-12">
 
-                  </tbody>
-                </table>
-                <p class="center"><input class="button" type="submit" value="新規登録"></p>
-                </form>	
+        <!--methodにpost入れる！！！-->
+        <form method="" action="">
+          <table class="table full-width">
+          <tbody>
+            <tr>
+              <th class="post"><label for="UserName">お名前</label><p class="required">※必須</p></th>
+              <td><input class="full-width" type="text" name="Name" placeholder="名前を記入" id="UserNameInput" required></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="email">メールアドレス</label><p class="required">※必須</p></th>
+              <td><input class="full-width" type="email" name="Email" placeholder="メールアドレスを記入" id="EmailInput" required></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="BirthDay">生年月日</label><p class="required">※必須</p></th>
+              <td><input class="full-width" type="date" name="Birth" id="BirthInput" required></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="Address">ご住所</label><p class="required">※必須</p></th>
+              <td><input class="full-width" type="text" name="Address" placeholder="住所を記入" id="Address" required></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="email">自己紹介</label></th>
+              <td><textarea class="full-width textarea" type="textaria" name="Introduction" id="Introduction"></textarea></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="image">アイコン</label></th>
+              <td><input class="full-width" type="file" accept="image/jpeg, image/png" name="アイコン" id="Icon"></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="password">パスワード</label><p class="required">※必須</p></th>
+              <td><input class="full-width" type="password" name="Password" placeholder="パスワードを入力" id="Password" required></td>
+            </tr>
+            <tr>
+              <th class="post"><label for="password">パスワード確認</label><p class="required">※必須</p></th>
+              <td><input class="full-width" type="password" name="Check_Password" placeholder="パスワードを再入力" id="Check_Password" required></td>
+            </tr>
+            <script>
+              function CheckPassword(Check_Password){
+                  var input1 = Password.value;
+                  var input2 = Check_Password.value;
+        
+                  if (input1 != input2){
+                      confirm.setCustomValidity("入力値が一致しません");
+                      return false;
+                  } else{
+                      confirm.setCustomValidity('');
+                      return true;
+                  }
+              };
+            </script>
+            </tbody>
+            </table>
+
+            <p class="center"><input class="button" formaction="index.html" type="submit" value="新規登録"></p>
+          
+          </form>	
                     
-                    </div>
-                    </div>
-                    </div>
-                </section>
+        </div>
+        </div>
+        </div>
+    </section>
 
 </main>
 
