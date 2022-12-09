@@ -12,6 +12,7 @@
 <link rel="stylesheet" media="all" href="css/post.css" />
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/style.js"></script>
+<script src="js/signup.js"></script>
 	
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="img/logo.png">
@@ -69,22 +70,8 @@
             </tr>
             <tr>
               <th class="post"><label for="password">パスワード確認</label><p class="required">※必須</p></th>
-              <td><input class="full-width" type="password" name="Check_Password" placeholder="パスワードを再入力" id="Check_Password" required></td>
+              <td><input class="full-width" type="password" name="Check_Password" placeholder="パスワードを再入力" id="Check_Password" required oninput="CheckPassword(this)"></td>
             </tr>
-            <script>
-              function CheckPassword(Check_Password){
-                  var input1 = Password.value;
-                  var input2 = Check_Password.value;
-        
-                  if (input1 != input2){
-                      confirm.setCustomValidity("入力値が一致しません");
-                      return false;
-                  } else{
-                      confirm.setCustomValidity('');
-                      return true;
-                  }
-              };
-            </script>
             </tbody>
             </table>
 
